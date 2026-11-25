@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://www.gstatic.com https://www.googletagmanager.com; style-src 'self'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; manifest-src 'self'; connect-src 'self' https://*.googleapis.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.firebaseio.com wss://*.firebaseio.com; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e1020">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="PoloPortal">
+<title>PoloPortal</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="stage"><div id="ring"></div><div id="hub"><b id="clk"></b><span id="hi"></span></div></div>
+<button class="gear" id="gear" aria-label="Editar accesos">⚙</button>
+<dialog id="dlg">
+  <h2>Mis accesos</h2>
+  <p>Escribe el emoji, el nombre y la dirección (https://…). Se guardan en este celular.</p>
+  <div id="rows"></div>
+  <div class="bar"><button id="add">+ Agregar</button><button id="rst">Restablecer</button><button class="ok" id="save">Guardar</button></div>
+</dialog>
+<script src="app.js"></script>
+<script type="module" src="firebase-init.js"></script>
+</body>
+</html>
